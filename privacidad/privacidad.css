@@ -2,7 +2,7 @@
   --legal-ink: #172017;
   --legal-body: #334032;
   --legal-muted: #586657;
-  --legal-green: #547c00;
+  --legal-green: #527900;
   --legal-green-bright: #8ed600;
   --legal-green-soft: #eef7dc;
   --legal-paper: #ffffff;
@@ -126,7 +126,7 @@ html {
 
 .legal-eyebrow,
 .legal-overline,
-.legal-pending-label {
+.legal-update-label {
   margin: 0;
   color: var(--legal-green-bright);
   font-size: 12px;
@@ -191,32 +191,32 @@ html {
   background: rgba(255, 255, 255, 0.11);
 }
 
-.legal-pending {
+.legal-update {
   display: grid;
   grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
   gap: 38px;
   margin: 32px 0;
   padding: 24px 26px;
-  border: 1px solid var(--legal-warning-line);
+  border: 1px solid #cfe0ad;
   border-radius: 18px;
-  color: var(--legal-warning);
-  background: var(--legal-warning-bg);
+  color: var(--legal-body);
+  background: var(--legal-green-soft);
 }
 
-.legal-pending-label {
-  color: var(--legal-warning);
+.legal-update-label {
+  color: var(--legal-green);
   font-size: 11px;
 }
 
-.legal-pending h2 {
+.legal-update h2 {
   margin-top: 7px;
-  color: #4e3900;
+  color: var(--legal-ink);
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: -0.02em;
 }
 
-.legal-pending > p {
+.legal-update > p {
   align-self: center;
   margin: 0;
   font-size: 14px;
@@ -312,11 +312,16 @@ html {
   display: inline-flex;
   align-items: center;
   min-height: 36px;
-  margin-top: 5px;
   color: var(--legal-green);
   font-size: 12px;
   font-weight: 700;
   overflow-wrap: anywhere;
+}
+
+.legal-help-links {
+  display: grid;
+  gap: 2px;
+  margin-top: 5px;
 }
 
 .legal-article {
@@ -597,6 +602,11 @@ html {
   .legal-help a {
     margin-top: 0;
   }
+
+  .legal-help-links {
+    margin-top: 0;
+    text-align: right;
+  }
 }
 
 @media (max-width: 640px) {
@@ -634,7 +644,7 @@ html {
     width: 100%;
   }
 
-  .legal-pending {
+  .legal-update {
     grid-template-columns: 1fr;
     gap: 14px;
     margin: 22px 0;
@@ -655,6 +665,11 @@ html {
 
   .legal-help a {
     margin-top: 5px;
+  }
+
+  .legal-help-links {
+    margin-top: 5px;
+    text-align: left;
   }
 
   .legal-article {
@@ -724,7 +739,7 @@ html {
   .skip-link,
   .legal-hero-actions,
   .legal-sidebar,
-  .legal-pending {
+  .legal-update {
     display: none !important;
   }
 
